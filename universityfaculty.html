@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/vitc.css">
+</head>
+<body>
+    <header>
+        <div class="urab">
+            YOUR IN FACULTY PAGE
+        </div>
+        <img src="images/Screenshot 2023-09-01 190344.png" alt="vitap logo" height="100px" width="100px"> <h1>VIT-AP UNIVERSITY</h1>
+        </header>
+        <div class="one">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="universityabout.html">About Us</a></li>
+                    <li><a href="universityprogram.html">Programs</a></li>  
+                    <li><a href="universityadmission.html">Admissions</a></li>
+                    <li><a href="universitycontact.html">Contact Us</a></li>
+                    <li><a href="http://localhost/tsas/admin/login.php" >Teachers subjects</a></li>
+                </ul>
+            </nav>  
+            <button onclick="method();">darkmode</button>
+        </div>
+        <main>
+            <h2>Our Faculty</h2>
+                
+        
+        <div class="fdall">
+            <div class="fdiv">
+                <img src="images/deepthy mam.png" alt="mam pic" height="100px" width="100px">
+                <p><b>Dr. Deepthi Godavarthi</b></p>
+                <p class="s">Specialization Areas: Artificial Intelligence, Machine Learning, Deep Learning, Natural Language Processing (NLP), 
+                    Cryptography and Network Security, Computer networks</p>
+            </div>
+            <div class="fdiv"><img src="images/sir.png" alt="sir pic" height="100px" width="100px">
+            <p><b>Dr.Naresh Sammeta </b>
+            </p>    
+            <p class="s">Specialization Areas: Cloud Computing, Blockchain, Cryptography, Data Structures and Algorithms, Java Programming, Web Technologies.</p>
+            </div>
+            <div class="fdiv"><img src="images/aswathy mam.png" alt="mam pic" height="100px" width="100px">
+            <p><b>Dr. Aswathy R K </b>
+            </p>    
+            <p class="s">Specialization Areas: Fractal theory, Fixed point theory, Dynamical systems, Iterated Function Systems, Self-similar sets.</p>
+            </div>
+            
+            <div class="fdiv"><img src="images/hari sir.png" alt="mam pic" height="100px" width="100px">
+            <p><b>Dr. K. Hari Kishan </b>
+            </p>    
+            <p class="s">Specialization Areas: Digital Image Processing, Internet of Things, Remote Sensing.</p>
+            </div>
+            <div class="fdiv"><img src="images/gokul sir.png" alt="mam pic" height="100px" width="100px">
+            <p><b>Dr. B.V.Gokulnath</b>
+            </p>    
+            <p class="s">Specialization Areas: Deep Learning, Machine Learning, Image Processing, Computer Vision, Artificial Intelligence</p>
+            </div>
+            
+        </div>
+        </main>
+        <footer class="hfoot">
+            <div>Announcement🔊</div>
+             <marquee>Welcome To VIT-AP UNIVERSITY -Admissions are open</marquee>
+        </footer>
+        <script>
+            function method(){
+                let a=document.querySelector('button');
+                if(a.innerHTML==='darkmode'){
+                document.querySelector('body').classList.add('darkmode');
+                a.innerHTML='whitemode';
+                }
+                else{
+                    document.querySelector('body').classList.remove('darkmode');
+                    a.innerHTML='darkmode';
+                }
+                
+            }
+        </script>
+</body>
+</html>

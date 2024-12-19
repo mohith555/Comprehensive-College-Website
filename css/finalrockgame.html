@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        button{
+            padding: 19px;
+            border-radius: 50px;
+            border:3px solid white;
+            background-color: black ;
+            color: white;
+            font-size: 50px;
+            margin-left: 10px;
+        }
+        p{
+            font-weight: bold;
+            font-size: 20px;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>rock paper scissor</h1>
+    <button onclick="main('rock');">✊</button>
+    <button onclick="main('paper');">✋</button>
+    <button onclick="main('scissor');"> ✌️</button>
+    <button class="resett">reset</button>
+    <button class="autoplay">Auto-play</button>
+    <p class="one"></p>
+    <p class="two"></p>
+    <p class="three"></p>
+    <p class="check"></p>
+    <script>
+        var e=JSON.parse(localStorage.getItem('namee'))||{
+            wins:0,
+            lose:0,
+            tie:0
+        };
+        function reset(){
+
+            e.wins=0; 
+            e.lose=0;
+            e.tie=0; 
+            localStorage.removeItem('e');
+            m();
+        }
+        document.querySelector('.resett').addEventListener('click',()=>{
+            // reset();
+            checkreset();
+        });
+        function checkreset(){
+            document.querySelector('.check').innerHTML=`Are you sure you want to reset the score<button onclick="reset();">yes</button> <button>no</button>`;
+        }
+        function cmethod(){
+            var cpickk='';
+            let m=Math.random();
+            if(m>=0&&m<1/3){
+                cpickk='rock';
+            }
+            else if(m>=1/3&&m<2/3){
+                cpickk='paper';
+            }
+            else{
+                cpickk='scissor';
+            }
+            return cpickk;
+        }
+        function main(myp){
+            let cpick=cmethod();
+            let result='';
+            if(myp==='rock'){
+                if(cpick==='rock'){
+                    e.tie+=1
+                    result='tie';
+                }
+                else if(cpick==='paper'){
+                    e.lose+=1;
+                    result='lose';
+                }
+                else{
+                    e.wins+=1;
+                    result='wins';
+                }
+            }
+            else if(myp==='paper'){
+                if(cpick==='rock'){
+                    e.wins+=1;
+                    result='wins';
+                }
+                else if(cpick==='paper'){
+                    e.tie+=1;
+                    result='tie';
+                }
+                else{
+                    e.lose+=1;
+                    result='lose';
+                }
+            }
+            else{
+                if(cpick==='rock'){
+                    e.lose+=1
+                    result='lose';
+                }
+                else if(cpick==='paper'){
+                    e.wins+=1;
+                    result='wins';
+                }
+                else{
+                    e.tie+=1;
+                    result='tie';
+                }
+            }
+            // alert(`win=${e.wins},lose=${e.lose},tie=${e.tie}`);
+            localStorage.setItem('namee',JSON.stringify(e));
+            document.querySelector('.one').innerHTML=`you ${result}`;
+            // document.querySelector('.two').innerHTML=`you choose ${myp}--computer choose${cpick}`;
+            resemoji(myp,cpick);
+            m();
+            
+        }
+        let b=true;
+        let stopi;
+        function autoplay(){
+            let checkdoc=document.querySelector('.autoplay');
+            if(b){
+            stopi= setInterval(function(){
+                let tempa=cmethod();
+                main(tempa);
+            },1000);
+            checkdoc.innerHTML='stop-it';
+            b=false;
+            }
+            else{
+                b=true;
+                clearInterval(stopi);
+                checkdoc.innerHTML='Auto-play';
+            }
+        }
+        document.querySelector('.autoplay').addEventListener('click',()=>{
+            autoplay();
+        })
+        function resemoji(myp,cpick){
+            let t=document.querySelector('.two');
+            let u='';
+            let c='';
+            if(myp==='rock'){
+                u='✊';
+            }
+            else if(myp==='paper'){
+                u='✋';
+            }
+            else{
+                u='✌️'
+            }
+            if(cpick==='rock'){
+                cpick='✊';
+            }
+            else if(cpick==='paper'){
+                cpick='✋';
+            }
+            else{
+                cpick='✌️'
+            }
+            
+            t.innerHTML=`you choose ${u}--computer choose${cpick}`;
+        }
+        function m(){
+            document.querySelector('.three').innerHTML=`win=${e.wins},lose=${e.lose},tie=${e.tie}`;
+        }
+        document.body.addEventListener('keydown',(event)=>{
+            if(event.key==='r'){
+                main('rock');
+            }
+            else if(event.key==='p'){
+                main('paper');
+            }
+            else if(event.key==='s'){
+                main('scissor');
+            }
+            else if(event.key==='a'){
+                autoplay();
+            }
+            else if(event.key==='Backspace'){
+                // reset();
+                checkreset()
+            }
+        });
+        
+    </script>
+</body>
+</html>

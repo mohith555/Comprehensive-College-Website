@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Website</title>
+<link rel="stylesheet" href="css/vitc.css">
+</head>
+<body>
+    <header>
+        <img src="images/Screenshot 2023-09-01 190344.png" alt="vitap logo" height="100px" width="100px"> <h1>VIT-AP UNIVERSITY</h1>
+         </header>
+         <main>
+        <div class="one">
+            <nav>
+                <ul>
+                    <li><a href="universityabout.html">About Us</a></li>
+                    <li><a href="universityprogram.html">Programs</a></li>
+                    <li><a href="universityfaculty.html">Faculty</a></li>
+                    <li><a href="universityadmission.html">Admissions</a></li>
+                    <li><a href="universitycontact.html">Contact Us</a></li>
+                    <li><a href="http://localhost/tsas/admin/login.php">Teacher subject allocation</a></li>
+
+                </ul>
+            </nav>  
+            <button onclick="method();">darkmode</button>
+        </div>
+        <h2>Welcome to VIT-AP University</h2>
+    <div class="homecontainer">
+        
+        <p>With a history of 37 years of innovation in educational and research domain, VIT  has been a forerunner in delivering quality education. Consistently ranked among the top educational institutes in the country, the VIT group of institutions have had a proud tradition of pursuing knowledge and excellence.In keeping with this tradition,  the leadership at VIT-AP resonates a dynamic blend of academic initiative and industry partnership with a vision of creating one of the finest academic destinations in the world.  The VIT-AP campus, which is poised to become one of the country's best campuses, offers several avenues  to explore your interests, identify core competencies, and engage in an evolving lifecycle of education and growth. It is a place where students are offered immense opportunities to learn, practice, grow, and thrive autonomous learning is encouraged in order to enable students to chart  their own course students carry out hands on experiments related to programme content in the form of Engineering Clinics industrial and international exposure is provided overall personality development is ensured through sports, clubs and chapters, and cultural activities.
+        </p>
+    </div>
+    <h3>INFRASTRUCTURE OF VIT-AP</h3>
+    <div class="ub">
+    <button onclick="viewo()" class="b2">view overall campus</button>
+    <button onclick="viewab1()" class="b3">View AB1</button>
+    <button onclick="viewab2()" class="b4">View AB2</button>
+    <button onclick="cb()" class="b5">View CB</button>
+    <button onclick="sa()" class="b6">View Sports academy</button>
+   
+    </div>
+        <img src="images/vitap.png" alt="picture of vitap" class="himg">
+        <img src="images/ab1.png" alt="ab1" class="himg img2">
+        <img src="images/ab2.png" alt="ab2" class="himg img3">
+        <img src="images/cb.png" alt="cb" class="himg img4">
+        <img src="images/sa.png" alt="sa" class="himg img5">
+        <h2>Events And Cultural Activities</h2>
+        
+    <div class="events">
+       <img src="images/vitopia2.png" alt="vitopia" height="300px" width="380px">
+       <img src="images/vitopia.png" alt="vitopia" height="300px" width="420px">
+       <img src="images/vitopia3.png" alt="vitopia" height="300px" width="370px">
+       <img src="images/vitopia4.png" alt="vitopia" height="300px" width="320px">
+       <img src="images/vitopia5.png" alt="vitopia" height="300px" width="300px">
+       <img src="images/vitopia6.png" alt="vitopia" height="300px" width="280px">
+       <img src="images/vitopia7.png" alt="vitopia" height="300px" width="460px">
+       <img src="images/convaction.png" alt="convaction" height="300px" width="450px">
+       <img src="images/convaction2.png" alt="convaction" height="300px" width="485px">
+       <img src="images/convaction3.png" alt="convaction" height="300px" width="490px">
+       <img src="images/convactionh.png" alt="convaction" height="300px" width="520px">
+    </div>
+    <h2>Placement Records</h2>
+    <div class="Placement">
+        <div class="mr">TCS-2009<div class="tcs1">1075</div></div>
+        <div class="mr">TCS-2010<div class="tcs2">803</div></div>
+        <div class="mr">Cognizant-2011<div class="cognizant1">1643</div></div>
+        <div class="mr">Cognizant-2012<div class="cognizant2">1820</div></div>
+        <div class="mr">Cognizant,Accenture,wipro-2013<div class="all1">3603</div></div>
+        <div class="mr">Cognizant,Accenture,wipro-2014<div class="all2">3934</div></div>
+        <div class="mr">Cognizant,Accenture,wipro,Infosys-2015<div class="all3">5828</div></div>
+        <div class="mr">Cognizant,Accenture,wipro,Infosys,TCS-2016<div class="all4">7947</div></div>
+        <div class="mr">Cognizant,TCS,Infosys-2017<div class="all5">3518</div></div>
+        
+
+    </div>
+
+    <div class="sp"></div>
+    </main>
+    <footer class="hfoot">
+        <div>Announcement🔊</div>
+         <marquee>Welcome To VIT-AP UNIVERSITY -Admissions are open</marquee>
+    </footer>
+
+<script>
+    function method(){
+        let a=document.querySelector('button');
+        if(a.innerHTML==='darkmode'){
+        document.querySelector('body').classList.add('darkmode');
+        a.innerHTML='whitemode';
+        }
+        else{
+            document.querySelector('body').classList.remove('darkmode');
+            a.innerHTML='darkmode';
+        }
+    }
+    function viewo(){
+        let b=document.querySelector('.b2');
+        if(b.innerHTML==='view overall campus'){
+            b.innerHTML='close overall campus';
+            document.querySelector('.himg').classList.add('vimg');
+        }
+        else{
+            document.querySelector('.himg').classList.remove('vimg');
+            b.innerHTML='view overall campus';
+        }
+    }
+    function viewab1(){
+        let b=document.querySelector('.b3');
+        if(b.innerHTML==='View AB1'){
+            b.innerHTML='close AB1';
+            document.querySelector('.img2').classList.add('vimg');
+        }
+        else{
+            document.querySelector('.img2').classList.remove('vimg');
+            b.innerHTML='View AB1';
+        }
+    }
+    function viewab2(){
+        let c=document.querySelector('.b4');
+        if(c.innerHTML==='View AB2'){
+            c.innerHTML='close AB2';
+            document.querySelector('.img3').classList.add('vimg');
+        }
+        else{
+            document.querySelector('.img3').classList.remove('vimg');
+            c.innerHTML='View AB2';
+        }
+    }
+    function cb(){
+        let c=document.querySelector('.b5');
+        if(c.innerHTML==='View CB'){
+            c.innerHTML='close CB';
+            document.querySelector('.img4').classList.add('vimg');
+        }
+        else{
+            document.querySelector('.img4').classList.remove('vimg');
+            c.innerHTML='View CB';
+        }
+    }
+    function sa(){
+        let c=document.querySelector('.b6');
+        if(c.innerHTML==='View Sports academy'){
+            c.innerHTML='close Sports academy';
+            document.querySelector('.img5').classList.add('vimg');
+        }
+        else{
+            document.querySelector('.img5').classList.remove('vimg');
+            c.innerHTML='View Sports academy';
+        }
+    }
+   
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* *{
+ margin:0;
+padding:0;
+box-sizing: border-box;
+}
+body{
+    margin:1rem;
+    font-family:'Times New Roman', Times, sans-serif;
+    text-align: center;
+    
+}
+nav{
+    border:3px solid black;
+    width:600px;
+    margin:0 auto 1rem;
+    font-size:2rem;
+    border-radius:25px;
+    
+
+}
+
+ul{
+    list-style-type:none;
+}
+h1{
+    background-color: yellow;
+    border-radius:25px 25px 0 0;
+}
+ul li{
+    border-top:2px solid black;
+}
+li a{
+    text-decoration: none;
+    color:black;
+
+}
+li a:hover,a:focus{
+    color:red;    
+    background-color: black;          
+}
+li a {
+    display:block;
+}
+li:last-child a{
+border-radius:0 0 25px 25px;
+} */
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    max-height: 100%;
+    max-width: 100%;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:2rem;
+gap:1rem;
+}
+.box{
+    width: 300px;
+    height: 210px;
+    background-color: black;
+    color:white;
+    display: grid;
+    place-content: center;
+}
+.box:first-child{
+    background-color: yellow;
+    transform: rotate(180deg);
+    transition:transform;
+    transition-duration: 10s;
+}
+.box:first-child:hover{
+    background-color: orange;
+   
+}
+.box:nth-child(2){
+    background-color: navy;
+}
+.box:last-child{
+    background-color: red;
+}
+.ani{
+    animation-name: mohit;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: 2;
+   
+
+}
+@keyframes mohit{
+    0%{
+        transform:translateX(0px);
+    }
+    15%{
+        transform:translateX(300px);
+    }
+    30%{
+        transform:translateX(-300px);
+    }
+    45%{
+        transform:translateY(300px);
+    }
+    60%{
+        transform:translateY(-300px);
+    }
+    75%{
+        
+        transform:rotate(180deg);
+    }
+    90%{
+        transform:rotate(-180deg);
+    }
+    100%{
+        background-color: red;
+    }
+} */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 1rem;
+}
+p{
+    background-color: black;
+    color: red;
+    padding: 1rem;
+    font-size: 2rem;
+    text-decoration: solid;
+    text-align: center;
+    border-radius: 35px;
+    transition-property: transform;
+    animation-name: okay;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    top:-500px;
+}
+@keyframes okay{
+   100%{
+    top: 0;
+   }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
